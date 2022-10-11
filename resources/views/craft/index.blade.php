@@ -32,7 +32,7 @@
                                 <td class="border px-6 py-4">{{ $item->rate }}</td>
                                 <td class="border px-6 py-4">{{ $item->types }}</td>
                                 <td class="border px-6 py-4">
-                                    <img src="{{ asset($item->picturePath) }}" alt="" title="">
+                                    <img class="w-16 md:w-32 lg:w-48 object-cover shadow-lg rounded-lg" src="{{ asset($item->picturePath) }}" alt="" title="">
                                 </td>
                                 <td class="border px-6 py-4 text-center">
                                     <a href="{{ route('craft.edit', $item->id) }}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mx-2 rounded">

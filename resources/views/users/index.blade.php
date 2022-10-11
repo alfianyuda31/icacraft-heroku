@@ -18,8 +18,8 @@
                             <th class="border px-6 py-4">Name</th>
                             <th class="border px-6 py-4">Email</th>
                             <th class="border px-6 py-4">Roles</th>
-                            <th class="border px-6 py-4">Action</th>
                             <th class="border px-6 py-4">Photo</th>
+                            <th class="border px-6 py-4">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,6 +29,9 @@
                                 <td class="border px-6 py-4">{{ $item->name }}</td>
                                 <td class="border px-6 py-4">{{ $item->email }}</td>
                                 <td class="border px-6 py-4">{{ $item->roles }}</td>
+                                <td class="border px-6 py-4">
+                                    <img class="w-16 md:w-32 lg:w-48 object-cover shadow-lg rounded-lg" src="{{ asset('storage/'.$item->profile_photo_path) }}" alt="" title="">
+                                </td>
                                 <td class="border px-6 py-4 text-center">
                                     <a href="{{ route('users.edit', $item->id) }}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mx-2 rounded">
                                         Edit
@@ -40,9 +43,7 @@
                                         </button>
                                     </form>
                                 </td>
-                                <td class="border px-6 py-4">
-                                    <img src="{{ asset('storage/'.$item->profile_photo_path) }}" alt="" title="">
-                                </td>
+                                
                             </tr>
                         @empty
                             <tr>

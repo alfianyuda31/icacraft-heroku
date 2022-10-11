@@ -15,7 +15,7 @@ class CraftController extends Controller
      */
     public function index()
     {
-        $craft = craft::paginate(1);
+        $craft = craft::paginate(10);
         
         return view('craft.index',[
             'craft' => $craft

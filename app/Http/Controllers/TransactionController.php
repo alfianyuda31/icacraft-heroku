@@ -98,6 +98,6 @@ class TransactionController extends Controller
         $transaction->status = $status;
         $transaction->save();
 
-        return redirect()->route('transaction.show', $id);
+        return redirect()->route('transactions.show', $id);
     }
 }

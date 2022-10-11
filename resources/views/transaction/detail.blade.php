@@ -7,82 +7,6 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="w-full rounded overflow-hidden shadow-lg px-6 py-6 bg-white">
-                <div class="flex flex-wrap -mx-4 -mb-4 md:mb-0">
-                    <div class="w-full md:w-1/6 px-4 mb-4 md:mb-0">
-                        <img src="{{ $item->craft->picturePath }}" alt="" class="w-full rounded">
-                    </div>
-                    <div class="w-full md:w-5/6 px-4 mb-4 md:mb-0">
-                        <table class="table-auto w-full text-left">
-                            <thead class="text-sm">
-                                <tr>
-                                    <th>Product Name</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-xl font-bold">
-                                <tr>
-                                    <td>
-                                        {{ $item->craft->name }}
-                                    </td>
-                                    <td>
-                                        {{ number_format($item->quantity) }}
-                                    </td>
-                                    <td>
-                                        {{ number_format($item->total) }}
-                                    </td>
-                                    <td>
-                                        {{ $item->status }}
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <thead class="text-sm">
-                                <tr>
-                                    <th>User Name</th>
-                                    <th>Email</th>
-                                    <th>House Number</th>
-                                    <th>Postal Code</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-xl font-bold">
-                                <tr>
-                                    <td>
-                                        {{ $item->user->name }}
-                                    </td>
-                                    <td>
-                                        {{ $item->user->email }}
-                                    </td>
-                                    <td>
-                                        {{ $item->user->houseNumber }}
-                                    </td>
-                                    <td>
-                                        {{ $item->user->postalCode }}
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <thead class="text-sm">
-                                <tr>
-                                    <th class="w-4/6">Address</th>
-                                    <th>Phone Number</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-xl font-bold">
-                                <tr>
-                                    <td>
-                                        {{ $item->user->address }}
-                                    </td>
-                                    <td>
-                                        {{ $item->user->phoneNumber }}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                    </div>
-                </div>
-            </div>
 
             <div class="w-full rounded overflow-hidden shadow-lg px-6 py-6 bg-white mt-5">
                 <div class="flex flex-wrap -mx-4 -mb-4 md:mb-0">
@@ -134,7 +58,7 @@
                             
                             <div class="w-2/6">
                                 <div class="text-sm">Postal Code</div>
-                                <div class="text-xl font-bold">{{ $item->user->phoneNumber }}</div>
+                                <div class="text-xl font-bold">{{ $item->user->postalCode }}</div>
                             </div>
                         </div>
                         <div class="flex flex-wrap mb-3">
